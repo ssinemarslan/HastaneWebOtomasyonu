@@ -1,0 +1,58 @@
+﻿@model IEnumerable<HastaneWeb.Models.PolikliniklerBilgi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Yeni", "Ekle", null, new {@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PoliklinikAdi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YatakSayisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UzmanSayisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PoliklinikBaskani)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PoliklinikBasHemsire)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PoliklinikAdi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YatakSayisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UzmanSayisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PoliklinikBaskani)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PoliklinikBasHemsire)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.PoliklinikNo }, new {@class="btn btn-warning"}) |
+           
+            @Html.ActionLink("Delete", "Delete", new { id=item.PoliklinikNo }, new {@class="btn btn-danger"})
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HastaneWebModelStoreContainer" CdmEntityContainer="HastaneWebEntities1">
+    <EntitySetMapping Name="DoktorlarBilgis">
+      <EntityTypeMapping TypeName="HastaneWebModel.DoktorlarBilgi">
+        <MappingFragment StoreEntitySet="DoktorlarBilgi">
+          <ScalarProperty Name="DoktorNo" ColumnName="DoktorNo" />
+          <ScalarProperty Name="DoktorAdSoyad" ColumnName="DoktorAdSoyad" />
+          <ScalarProperty Name="Yas" ColumnName="Yas" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Brans" ColumnName="Brans" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HastalarBilgis">
+      <EntityTypeMapping TypeName="HastaneWebModel.HastalarBilgi">
+        <MappingFragment StoreEntitySet="HastalarBilgi">
+          <ScalarProperty Name="HastaNo" ColumnName="HastaNo" />
+          <ScalarProperty Name="HastaAdSoyad" ColumnName="HastaAdSoyad" />
+          <ScalarProperty Name="Yas" ColumnName="Yas" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Sikayet" ColumnName="Sikayet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KullanicilarBilgis">
+      <EntityTypeMapping TypeName="HastaneWebModel.KullanicilarBilgi">
+        <MappingFragment StoreEntitySet="KullanicilarBilgi">
+          <ScalarProperty Name="KullaniciNo" ColumnName="KullaniciNo" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PolikliniklerBilgis">
+      <EntityTypeMapping TypeName="HastaneWebModel.PolikliniklerBilgi">
+        <MappingFragment StoreEntitySet="PolikliniklerBilgi">
+          <ScalarProperty Name="PoliklinikNo" ColumnName="PoliklinikNo" />
+          <ScalarProperty Name="PoliklinikAdi" ColumnName="PoliklinikAdi" />
+          <ScalarProperty Name="YatakSayisi" ColumnName="YatakSayisi" />
+          <ScalarProperty Name="UzmanSayisi" ColumnName="UzmanSayisi" />
+          <ScalarProperty Name="PoliklinikBaskani" ColumnName="PoliklinikBaskani" />
+          <ScalarProperty Name="PoliklinikBasHemsire" ColumnName="PoliklinikBasHemsire" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

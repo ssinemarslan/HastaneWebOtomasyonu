@@ -1,0 +1,65 @@
+﻿@model HastaneWeb.Models.PolikliniklerBilgi
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PolikliniklerBilgi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliklinikAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliklinikAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YatakSayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YatakSayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UzmanSayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UzmanSayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliklinikBaskani)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliklinikBaskani)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PoliklinikBasHemsire)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PoliklinikBasHemsire)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

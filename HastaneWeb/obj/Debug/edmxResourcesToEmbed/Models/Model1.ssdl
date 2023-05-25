@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HastaneWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DoktorlarBilgi">
+    <Key>
+      <PropertyRef Name="DoktorNo" />
+    </Key>
+    <Property Name="DoktorNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoktorAdSoyad" Type="varchar" MaxLength="50" />
+    <Property Name="Yas" Type="varchar" MaxLength="50" />
+    <Property Name="Adres" Type="varchar" MaxLength="50" />
+    <Property Name="Brans" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HastalarBilgi">
+    <Key>
+      <PropertyRef Name="HastaNo" />
+    </Key>
+    <Property Name="HastaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HastaAdSoyad" Type="varchar" MaxLength="50" />
+    <Property Name="Yas" Type="varchar" MaxLength="50" />
+    <Property Name="Adres" Type="varchar" MaxLength="50" />
+    <Property Name="Sikayet" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="KullanicilarBilgi">
+    <Key>
+      <PropertyRef Name="KullaniciNo" />
+    </Key>
+    <Property Name="KullaniciNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="varchar" MaxLength="50" />
+    <Property Name="Sifre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PolikliniklerBilgi">
+    <Key>
+      <PropertyRef Name="PoliklinikNo" />
+    </Key>
+    <Property Name="PoliklinikNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PoliklinikAdi" Type="nchar" MaxLength="50" />
+    <Property Name="YatakSayisi" Type="int" />
+    <Property Name="UzmanSayisi" Type="int" />
+    <Property Name="PoliklinikBaskani" Type="nchar" MaxLength="10" />
+    <Property Name="PoliklinikBasHemsire" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityContainer Name="HastaneWebModelStoreContainer">
+    <EntitySet Name="DoktorlarBilgi" EntityType="Self.DoktorlarBilgi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HastalarBilgi" EntityType="Self.HastalarBilgi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KullanicilarBilgi" EntityType="Self.KullanicilarBilgi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PolikliniklerBilgi" EntityType="Self.PolikliniklerBilgi" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

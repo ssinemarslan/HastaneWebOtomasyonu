@@ -1,0 +1,52 @@
+﻿@model IEnumerable<HastaneWeb.Models.HastalarBilgi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Yeni", "Ekle", null, new {@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.HastaAdSoyad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sikayet)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HastaAdSoyad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sikayet)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id = item.HastaNo }, new {@class="btn btn-warning"}) |
+           
+            @Html.ActionLink("Sil", "Delete", new { id=item.HastaNo },new {@class="btn btn-danger"})
+        </td>
+    </tr>
+}
+
+</table>
